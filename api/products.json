@@ -5,7 +5,8 @@
     "price": 15,
     "description": "Descubre la dulce tentación de nuestro exquisito arroz con leche. ",
     "ingredients": ["Arroz", "Leche", "Azucar"],
-    "calories": 100
+    "calories": 100,
+    "categories": ["#postres", "#lácteos"]
   },
   {
     "name": "Cuajada",
@@ -13,20 +14,23 @@
     "price": 12,
     "description": "Deléitate con nuestra irresistible cuajada, un postre clásico que combina la suavidad de la leche con un toque delicado y ligeramente ácido.",
     "ingredients": ["Leche", "Azucar", "Cuajo"],
-    "calories": 125
+    "calories": 125,
+    "categories": ["#ácido", "#clásico"]
   },
   {
     "name": "Yogurt Griego",
     "image": "yogurtgriego",
     "price": 18,
     "description": "Descubre la excelencia del auténtico yogurt griego.",
-    "ingredients": ["Leche", "Frutas frescas", "Miel"]
+    "ingredients": ["Leche", "Frutas frescas", "Miel"],
+    "categories": ["#miel", "#yogurt"]
   },
   {
-    "name": "Bebible de fresa",
-    "image": "bebiblefresa",
+    "name": "Flan",
+    "image": "flan",
     "price": 15,
-    "description": "Elaborado con ingredientes de calidad, nuestro yogurt bebible combina la suavidad de la leche con el dulzor natural de las fresas maduras.",
-    "ingredients": ["Leche", "Fresas", "Azucar"]
+    "description": "Sumérgete en la suavidad y el encanto irresistible de nuestro exquisito flan casero. ",
+    "ingredients": ["Huevos frescos", "Leche", "Esencia de vainilla"],
+    "categories": ["#suave", "#vainilla"]
   }
 ]
