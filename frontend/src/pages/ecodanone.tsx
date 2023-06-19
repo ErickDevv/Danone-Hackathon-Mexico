@@ -87,7 +87,7 @@ const EcoDanone = () => {
     return res;
   };
 
-  const { isLoading, error, data } = useQuery("products", fetchProducts);
+  const { isLoading, error } = useQuery("products", fetchProducts);
 
   if (isLoading) {
     return <div>Loading...</div>;

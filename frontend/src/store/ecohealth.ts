@@ -8,7 +8,7 @@ const search = (products, query) => {
   );
 };
 
-const useEcohealth = create((set) => ({
+const useEcohealth = create(() => ({
   //@ts-ignore
   searchQuery: (products, query) => search(products, query),
 }));
