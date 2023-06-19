@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Nav from "./nav";
-import yogurt from "/public/products/yogurtnatural.jpg";
+import yogurt from "../..//public/yogurtnatural.jpg";
 
 const Home = () => {
   return (
