@@ -1,32 +1,32 @@
 [
-    {
-      "name": "Arroz con leche",
-      "image": "",
-      "price": "15$",
-      "description":""
-    },
-    {
-        "name": "Arroz con leche",
-        "image": "",
-        "price": "15$",
-        "description":""
-      },
-      {
-        "name": "Arroz con leche",
-        "image": "",
-        "price": "15$",
-        "description":""
-      },
-      {
-        "name": "Arroz con leche",
-        "image": "",
-        "price": "15$",
-        "description":""
-      },
-      {
-        "name": "Arroz con leche",
-        "image": "",
-        "price": "15$",
-        "description":""
-      }
-  ]
+  {
+    "name": "Arroz con leche",
+    "image": "arrozconleche",
+    "price": 15,
+    "description": "Descubre la dulce tentación de nuestro exquisito arroz con leche. ",
+    "ingredients": ["Arroz", "Leche", "Azucar"],
+    "calories": 100
+  },
+  {
+    "name": "Cuajada",
+    "image": "cuajada",
+    "price": 12,
+    "description": "Deléitate con nuestra irresistible cuajada, un postre clásico que combina la suavidad de la leche con un toque delicado y ligeramente ácido.",
+    "ingredients": ["Leche", "Azucar", "Cuajo"],
+    "calories": 125
+  },
+  {
+    "name": "Yogurt Griego",
+    "image": "yogurtgriego",
+    "price": 18,
+    "description": "Descubre la excelencia del auténtico yogurt griego.",
+    "ingredients": ["Leche", "Frutas frescas", "Miel"]
+  },
+  {
+    "name": "Bebible de fresa",
+    "image": "bebiblefresa",
+    "price": 15,
+    "description": "Elaborado con ingredientes de calidad, nuestro yogurt bebible combina la suavidad de la leche con el dulzor natural de las fresas maduras.",
+    "ingredients": ["Leche", "Fresas", "Azucar"]
+  }
+]
