@@ -1,7 +1,14 @@
 import Nav from "./nav";
 import arrozConLeche from "/public/products/arrozConLeche.jpg";
 
-const Product = ({ name, image, price, description }) => {
+interface Product {
+  name: string;
+  image: string;
+  price: number;
+  description: string;
+}
+
+const Product = ({ name, image, price, description }: Product) => {
   if (!image) {
     image = arrozConLeche;
   }
@@ -18,6 +25,7 @@ const Product = ({ name, image, price, description }) => {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{name}</div>
         <p className="text-gray-700 text-base">{description}</p>
+        <p className="text-gray-700 text-base">{price}</p>
       </div>
       <div className="px-6 py-4">
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
