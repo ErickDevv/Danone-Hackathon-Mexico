@@ -1,8 +1,13 @@
+import Nav from "./nav";
+
+
+
 const EcoHealth = () => {
     return (
-      <div>
-        <h1>EcoHealth</h1>
-      </div>
+      <>
+        <Nav />
+        
+      </>
     );
   };
   

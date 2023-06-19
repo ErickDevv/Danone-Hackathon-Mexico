@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import Nav from "./nav";
-import yogurt from "/public/sara-cervera-4caIPcmVDII-unsplash.jpg";
+import yogurt from "/public/products/yogurtnatural.jpg";
 
 const Home = () => {
   return (
@@ -31,15 +32,15 @@ const Home = () => {
               cultivados con amor y respeto por tu bienestar y el planeta
             </h1>
 
-            <button className="bg-[#0B78A5] z-50 text-white font-bold text-xl px-10 py-2 mt-10 rounded-lg">
-              Descubre más
+            <button className="bg-[#229cd0] z-50 text-white font-bold text-xl px-10 py-2 mt-10 rounded-lg">
+              🔎 Descubre más
             </button>
           </div>
         </div>
       </div>
 
       {/**/}
-      <h2 className="text-3xl lg:text-center mb-5 font-bold text-[#0A135C] ml-4 mt-10">
+      <h2 className="text-4xl lg:text-center mb-5 font-bold text-[#0A135C] ml-4 mt-10">
         DanoneEco
       </h2>
       <div className="lg:flex ">
@@ -49,7 +50,7 @@ const Home = () => {
             etapas de producción, desde el cultivo hasta el envasado y
             distribución.
           </h4>
-         
+
           <h4 className="hidden lg:block text-sm md:text-xl font-semibold lg:text-center lg:text-2xl text-end px-5 mb-5 text-[#2F3247]">
             ❤️‍🩹Utilizamos ingredientes de origen natural para garantizar que tu
             salud y la del planeta estén en armonía.
@@ -57,19 +58,32 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center w-screen ">
-          <div className="flex flex-col  justify-center items-center">
-            <img src={yogurt} alt="ecoDanone1" className="h-44" />
-            <h2 className="text-2xl font-bold text-[#0A135C] mt-5">
-              Yogurth Griego Yumi
-            </h2>
-            <h3 className="text-xl text-center font-bold text-[#2F3247] mt-5">
-              ¡Descubre el deleite de este Yoguth Griego 100% ecológico!
-            </h3>
-
-            <button className="bg-[#0B78A5] text-white font-bold text-xl px-8 py-1 mt-5 rounded-lg">
-              Ver más productos
-            </button>
+          <div className="max-w-sm  mt-5 mx-2 rounded overflow-hidden flex flex-col justify-center items-center border-2 ">
+            <img className="lg:w-52 w-40 pt-5" src={yogurt} alt="Product Image" />
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Yogurt Natural</div>
+              <p className="text-gray-700 text-base px-1">
+                Elaborado con ingredientes mínimos y sin aditivos innecesarios,
+                nuestro yogurt natural te ofrece la esencia misma de la frescura
+                láctea.{" "}
+              </p>
+              <p className="text-gray-700 text- text-end">Precio: $8</p>
+            </div>
+            <div className="px-6 py-4">
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+              #Fresco
+              </span>
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+                #Yogurt
+              </span>
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+                #Natural
+              </span>
+            </div>
           </div>
+          <button className="mt-5 text-lg sm:text-3xl font-bold text-[#0A135C] ml-4 border-2 border-[#0A135C] rounded-lg px-5 py-1">
+            👀 Ver más
+            </button>
         </div>
       </div>
       {/**/}
@@ -78,12 +92,15 @@ const Home = () => {
           Presentamos EcoHealth
         </h2>
         <h4 className="text-sm md:text-xl font-semibold text-end px-5 mb-5 text-[#2F3247]">
-          📱Nuestra aplicación de seguimiento de consumo
-          diario de calorias en base a tus productos EcoDanone.
+          📱Nuestra aplicación de seguimiento de consumo diario de calorias en
+          base a tus productos EcoDanone.
         </h4>
-        <button className="bg-[#0B78A5] text-white font-bold text-xl px-8 py-1 mt-5 rounded-lg">
-          Probar EcoHealth
-        </button>
+        <Link
+          to="/ecohealth"
+          className="text-lg sm:text-3xl font-bold text-[#0A135C] ml-4 border-2 border-[#0A135C] rounded-lg px-5 py-1"
+        >
+          ❤️‍🩹Probar
+        </Link>
       </div>
       <div className="h-10 w-screen mt-5 bg-white flex items-center justify-center">
         <h2 className="text-white text-xl font-bold">DanoneEco</h2>

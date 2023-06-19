@@ -7,6 +7,9 @@ import logo from "../public/logo.png";
 
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -26,7 +29,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <link rel="icon" type="image/svg+xml" href={logo} sizes="any" />
+    <QueryClientProvider client={queryClient}>
 
     <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>
 );

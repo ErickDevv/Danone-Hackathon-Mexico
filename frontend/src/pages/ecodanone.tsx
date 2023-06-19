@@ -1,5 +1,13 @@
 import Nav from "./nav";
-import arrozConLeche from "/products/arrozConLeche.jpg";
+import arrozconleche from "/products/arrozconleche.jpg";
+import flan from "/products/flan.jpg";
+import cuajada from "/products/cuajada.jpg";
+import griego from "/products/griego.jpg";
+
+import { useQuery } from "react-query";
+import { useState } from "react";
+
+import useEcohealth from "../store/ecohealth";
 
 interface Product {
   name: string;
@@ -10,22 +18,31 @@ interface Product {
 
 const Product = ({ name, image, price, description }: Product) => {
   if (!image) {
-    image = arrozConLeche;
+    image = arrozconleche;
   }
 
   switch (image) {
-    case "arrozConLeche":
-      image = arrozConLeche;
+    case "arrozconleche":
+      image = arrozconleche;
+      break;
+    case "flan":
+      image = flan;
+      break;
+    case "cuajada":
+      image = cuajada;
+      break;
+    case "yogurtgriego":
+      image = griego;
       break;
   }
 
   return (
-    <div className="max-w-sm mt-5 mx-2 rounded overflow-hidden shadow-lg flex flex-col justify-center items-center">
-      <img className="lg:w-52 w-40" src={image} alt="Product Image" />
+    <div className="max-w-sm  mt-5 mx-2 rounded overflow-hidden shadow-lg flex flex-col justify-center items-center">
+      <img className="lg:w-52 h-56 w-40" src={image} alt="Product Image" />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{name}</div>
         <p className="text-gray-700 text-base">{description}</p>
-        <p className="text-gray-700 text-base">Precio: ${price}</p>
+        <p className="text-gray-700 text- text-end">Precio: ${price}</p>
       </div>
       <div className="px-6 py-4">
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
@@ -35,43 +52,51 @@ const Product = ({ name, image, price, description }: Product) => {
           #Another Category
         </span>
       </div>
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mb-10">
+        Agregar al carrito
+      </button>
     </div>
   );
 };
 
 const EcoDanone = () => {
-  const Products = [
-    {
-      name: "Arroz con leche",
-      image: "",
-      price: 15,
-      description: "",
-    },
-    {
-      name: "Arroz con leche",
-      image: "",
-      price: 15,
-      description: "",
-    },
-    {
-      name: "Arroz con leche",
-      image: "",
-      price: 15,
-      description: "",
-    },
-    {
-      name: "Arroz con leche",
-      image: "",
-      price: 15,
-      description: "",
-    },
-    {
-      name: "Arroz con leche",
-      image: "",
-      price: 15,
-      description: "",
-    },
-  ];
+  const [products, setProducts] = useState([]);
+  const [productsCopy, setProductsCopy] = useState([]);
+
+  //@ts-ignore
+  const { searchQuery } = useEcohealth();
+
+  const handleSearch = (e: any) => {
+    const filteredProducts = searchQuery(products, e.target.value);
+
+    setProductsCopy(filteredProducts);
+  };
+
+  const fetchProducts = async () => {
+    const response = await fetch(
+      import.meta.env.VITE_API_URL + "api/getProducts"
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const res = await response.json();
+
+    setProducts(res);
+    setProductsCopy(res);
+    return res;
+  };
+
+  const { isLoading, error, data } = useQuery("products", fetchProducts);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    //@ts-ignore
+    return <div>Error {error.message}</div>;
+  }
 
   return (
     <>
@@ -87,6 +112,7 @@ const EcoDanone = () => {
           type="text"
           className="w-1/2 py-2 px-4 rounded-md focus:outline-none border focus:ring-2 focus:ring-blue-500"
           placeholder="Buscar..."
+          onChange={handleSearch}
         />
         <button className="py-2 px-4 ml-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
           Buscar
@@ -94,7 +120,7 @@ const EcoDanone = () => {
       </div>
 
       <div className="flex justify-center items-center w-screen flex-wrap">
-        {Products.map((product) => (
+        {productsCopy.map((product: any) => (
           <Product
             name={product.name}
             image={product.image}
