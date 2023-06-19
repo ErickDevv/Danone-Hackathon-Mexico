@@ -134,50 +134,52 @@ const EcoDanone = () => {
 
   return (
     <>
-      <Nav />
-      {isCartOpen == true ? (
-        <div
-          className="h-[calc(100%-5rem)] w-full z-50 absolute flex justify-center items-center"
-          style={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}
-        >
-          <div className="flex flex-col w-1/2  lg:w-1/3 z-50 h-[600px] border-2 border-gray-300">
-            <div className="bg-white w-full h-full overflow-y-scroll">
-              <div className="flex m-2 h-10 bg-white border-gray-300 justify-end items-center">
-                <button
-                  onClick={() => setIsCartOpen(false)}
-                  className="text-2xl md:text-3xl font-bold text-center z-50 "
-                >
-                  ❌
-                </button>
-              </div>
-              {shoppingCart.length > 0 && (
-                <div>
-                  {shoppingCart.map((product: any) => (
-                    <div className=" w-full h-20 bg-gray-100 flex justify-center flex-col items-center border-b-2 border-gray-300">
-                      {" "}
-                      <div className="flex justify-evenly items-between w-full">
-                        <p className="text-2xl md:text-3xl font-bold text-center z-50">
-                          📌
-                        </p>
-                        <h3 className="text-3xl md:text-4xl font-bold text-center z-50 text-blue-900">
-                          {product}
-                        </h3>
-                        <div></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
+    {isCartOpen == true ? (
+  <div
+    className="h-[calc(100%-5rem)] w-full z-50 fixed top-0 left-0 flex justify-center items-center"
+    style={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}
+  >
+    <div className="flex flex-col w-1/2  lg:w-1/3 z-50 h-[600px] border-2 border-gray-300">
+      <div className="bg-white w-full h-full overflow-y-scroll">
+        <div className="flex m-2 h-10 bg-white border-gray-300 justify-end items-center">
+          <button
+            onClick={() => setIsCartOpen(false)}
+            className="text-2xl md:text-3xl font-bold text-center z-50 "
+          >
+            ❌
+          </button>
         </div>
-      ) : null}
+        {shoppingCart.length > 0 && (
+          <div>
+            {shoppingCart.map((product: any) => (
+              <div className=" w-full h-20 bg-gray-100 flex justify-center flex-col items-center border-b-2 border-gray-300">
+                {" "}
+                <div className="flex justify-evenly items-between w-full">
+                  <p className="text-2xl md:text-3xl font-bold text-center z-50">
+                    📌
+                  </p>
+                  <h3 className="text-2xl md:text-4xl font-bold text-center z-50 text-blue-900">
+                    {product}
+                  </h3>
+                  <div></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+) : null}
+
+      <Nav />
+  
 
       {description && (
         <div className="bg-[#85b4ff] p-5 px-12 text-center text-white font-bold text-sm md:text-xl relative">
           <button
             onClick={() => setDescription(false)}
-            className="absolute top-5 right-5 transform translate-x-1/2 -translate-y-1/2 z-50"
+            className="absolute top-5 right-5 transform translate-x-1/2 -translate-y-1/2 z-40"
           >
             ❌
           </button>
