@@ -139,7 +139,7 @@ const EcoDanone = () => {
     className="h-[calc(100%-5rem)] w-full z-50 fixed top-0 left-0 flex justify-center items-center"
     style={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}
   >
-    <div className="flex flex-col w-1/2  lg:w-1/3 z-50 h-[600px] border-2 border-gray-300">
+    <div className="flex flex-col w-full   md:w-1/2 z-50 h-[600px] border-2 border-gray-300">
       <div className="bg-white w-full h-full overflow-y-scroll">
         <div className="flex m-2 h-10 bg-white border-gray-300 justify-end items-center">
           <button
