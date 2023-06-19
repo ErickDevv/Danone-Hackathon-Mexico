@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import EcoDanone from "./pages/ecodanone";
-import EcoHealth from "./pages/ecohealth";
 import Home from "./pages/home";
 import logo from "../public/logo.png";
 
@@ -15,10 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-  },
-  {
-    path: "/ecohealth",
-    element: <EcoHealth />,
   },
   {
     path: "/ecodanone",

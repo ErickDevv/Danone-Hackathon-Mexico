@@ -8,7 +8,17 @@ const search = (products, query) => {
   );
 };
 
-const useEcohealth = create(() => ({
+const useEcohealth = create((set) => ({
+  shoppingCart: [],
+  //@ts-ignore
+  addToCart: (product) =>
+    //@ts-ignore
+    set((state) => ({
+      shoppingCart: [...state.shoppingCart, product],
+    })),
+  isCartOpen: false,
+  //@ts-ignore
+  setIsCartOpen: (isCartOpen) => set({ isCartOpen }),
   //@ts-ignore
   searchQuery: (products, query) => search(products, query),
 }));
