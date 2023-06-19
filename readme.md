@@ -2,7 +2,9 @@
 
 ## Descripción del proyecto
 
-El proyecto consiste es una aplicación web que da a conocer la línea de productos Eco de Danone. Incorpora un buscador de productos.
+El proyecto consiste es una aplicación web que da a conocer la línea de productos Eco de Danone. Incorpora un buscador de productos y la posibilidad de tener un carrito de compras.
+
+![screenshot](images/screenshot.png)
 
 ## Instalación
 
@@ -41,9 +43,9 @@ Para el desarrollo del proyecto se utilizaron las siguentes tecnologías:
 - *TailwindCSS*
 - *Express*
 
-React permite agilizar el desarrollo de la aplicación del lado del cliente, mientras que Express permite crear una API REST para el manejo de los datos entre los que se encuentran los productos a mostrar.
+React permite agilizar el desarrollo de la aplicación del lado del cliente, lo complementé con librerías como React Query para gestionar el estado de las peticiones a la API , y Zustand para hacer uso de un estado global. Mientras que Express permite crear una API REST para el manejo de los datos entre los que se encuentran los productos a mostrar.
 
-Decidí agregar TailwindCSS desde el inicio del desarrollo para agilizar el poder dar estilos a la aplicación.
+Decidí agregar TailwindCSS desde el inicio del desarrollo para agilizar el poder dar estilos a la aplicación. Cabe mencionar que la aplicación es responsive.
 
 ### **DevOps**
 
