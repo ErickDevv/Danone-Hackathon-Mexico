@@ -9,7 +9,7 @@ const Home = () => {
         <div
           className="relative h-80 w-screen flex items-center justify-center"
           style={{
-            backgroundImage: `url('/public/vicky-ng-yIh0i6TYGrs-unsplash.jpg')`,
+            backgroundImage: `url('vicky-ng-yIh0i6TYGrs-unsplash.jpg')`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -40,20 +40,19 @@ const Home = () => {
 
       {/**/}
       <h2 className="text-3xl lg:text-center mb-5 font-bold text-[#0A135C] ml-4 mt-10">
-        Danone Eco
+        DanoneEco
       </h2>
       <div className="lg:flex ">
         <div className="flex-col flex h-auto justify-center items-center">
-          <h4 className="text-sm md:text-xl font-semibold text-end lg:text-start px-5 mb-5 text-[#2F3247]">
-            Compromiso con la reducción del impacto ambiental en todas las
+          <h4 className="text-sm md:text-xl font-semibold text-end lg:text-center lg:text-2xl px-5 mb-5 text-[#2F3247]">
+            🌱 Compromiso con la reducción del impacto ambiental en todas las
             etapas de producción, desde el cultivo hasta el envasado y
             distribución.
           </h4>
-
-          <h4 className="hidden lg:block text-sm md:text-xl font-semibold text-end lg:text-start px-5 mb-5 text-[#2F3247]">
-            Compromiso con la reducción del impacto ambiental en todas las
-            etapas de producción, desde el cultivo hasta el envasado y
-            distribución.
+         
+          <h4 className="hidden lg:block text-sm md:text-xl font-semibold lg:text-center lg:text-2xl text-end px-5 mb-5 text-[#2F3247]">
+            ❤️‍🩹Utilizamos ingredientes de origen natural para garantizar que tu
+            salud y la del planeta estén en armonía.
           </h4>
         </div>
 
@@ -79,16 +78,15 @@ const Home = () => {
           Presentamos EcoHealth
         </h2>
         <h4 className="text-sm md:text-xl font-semibold text-end px-5 mb-5 text-[#2F3247]">
-          EcoHealth se trata de nuestra aplicación para el seguimiento de tu
-          salud la cual te permite realizar un seguimiento de tu consumo diario
-          de calorias.
+          📱Nuestra aplicación de seguimiento de consumo
+          diario de calorias en base a tus productos EcoDanone.
         </h4>
         <button className="bg-[#0B78A5] text-white font-bold text-xl px-8 py-1 mt-5 rounded-lg">
           Probar EcoHealth
         </button>
       </div>
       <div className="h-10 w-screen mt-5 bg-white flex items-center justify-center">
-        <h2 className="text-white text-xl font-bold">Danone Eco</h2>
+        <h2 className="text-white text-xl font-bold">DanoneEco</h2>
       </div>
     </>
   );
