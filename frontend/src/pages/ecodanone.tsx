@@ -1,8 +1,8 @@
 import Nav from "./nav";
-import arrozconleche from "/public/arrozconleche.jpg";
-import flan from "/public/flan.jpg";
-import cuajada from "/public/cuajada.jpg";
-import griego from "/public/griego.jpg";
+import arrozconleche from "../../public/arrozconleche.jpg";
+import flan from "../../public/public/flan.jpg";
+import cuajada from "../../public/public/cuajada.jpg";
+import griego from "../../public/public/griego.jpg";
 
 import { useQuery } from "react-query";
 import { useState } from "react";
