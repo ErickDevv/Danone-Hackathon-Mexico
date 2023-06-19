@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
-import Nav from "./nav";
+import { Link, useNavigate } from "react-router-dom";
+import Nav from "../components/nav";
 import yogurt from "../..//public/yogurtnatural.jpg";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Nav />
@@ -22,17 +23,19 @@ const Home = () => {
               style={{ opacity: 1 }}
             >
               Sabor auténtico para una vida saludable y en armonía con la
-              naturaleza
+              naturaleza.
             </h1>
             <h1
               className="text-xl md:text-3xl text-center font-bold text-white z-50"
               style={{ opacity: 1 }}
             >
               Descubre nuestra selección de productos saludables y ecológicos,
-              cultivados con amor y respeto por tu bienestar y el planeta
+              cultivados con amor y respeto por tu bienestar y el del planeta.
             </h1>
 
-            <button className="bg-[#229cd0] z-50 text-white font-bold text-xl px-10 py-2 mt-10 rounded-lg">
+            <button
+            onClick={() => navigate("/ecodanone")}
+            className="bg-[#229cd0] z-50 text-white font-bold text-xl px-10 py-2 mt-10 rounded-lg">
               🔎 Descubre más
             </button>
           </div>
@@ -59,7 +62,11 @@ const Home = () => {
 
         <div className="flex flex-col justify-center items-center w-screen ">
           <div className="max-w-sm  mt-5 mx-2 rounded overflow-hidden flex flex-col justify-center items-center border-2 ">
-            <img className="lg:w-52 w-40 pt-5" src={yogurt} alt="Product Image" />
+            <img
+              className="lg:w-52 w-40 pt-5"
+              src={yogurt}
+              alt="Product Image"
+            />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Yogurt Natural</div>
               <p className="text-gray-700 text-base px-1">
@@ -71,19 +78,19 @@ const Home = () => {
             </div>
             <div className="px-6 py-4">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-              #Fresco
+                #fresco
               </span>
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                #Yogurt
+                #yogurt
               </span>
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                #Natural
+                #natural
               </span>
             </div>
           </div>
-          <button className="mt-5 text-lg sm:text-3xl font-bold text-[#0A135C] ml-4 border-2 border-[#0A135C] rounded-lg px-5 py-1">
+          <button  onClick={() => navigate("/ecodanone")} className="mt-5 text-lg sm:text-3xl font-bold text-[#0A135C] ml-4 border-2 border-[#0A135C] rounded-lg px-5 py-1">
             👀 Ver más
-            </button>
+          </button>
         </div>
       </div>
       {/**/}
@@ -96,7 +103,7 @@ const Home = () => {
           base a tus productos EcoDanone.
         </h4>
         <Link
-          to="/ecohealth"
+          to="/ecodanone"
           className="text-lg sm:text-3xl font-bold text-[#0A135C] ml-4 border-2 border-[#0A135C] rounded-lg px-5 py-1"
         >
           ❤️‍🩹Probar
